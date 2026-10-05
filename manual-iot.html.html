@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual y FAQ Interactivo - Urgegas IoT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        urgegas: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-urgegas-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-2 md:mb-0">
+                <div class="bg-urgegas-500 p-2 rounded-lg text-white font-bold text-xl shadow">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide">URGEGAS IoT</h1>
+                    <p class="text-xs text-urgegas-100">Manual de Capacitación y Soporte Técnico Interactivo</p>
+                </div>
+            </div>
+            <nav class="flex space-x-2 text-sm">
+                <button onclick="switchTab('manual')" id="btn-manual" class="px-4 py-2 rounded-lg bg-urgegas-700 font-medium transition hover:bg-urgegas-600">Manual Técnico</button>
+                <button onclick="switchTab('faq')" id="btn-faq" class="px-4 py-2 rounded-lg bg-urgegas-900 font-medium transition hover:bg-urgegas-700">FAQ Interactivo</button>
+                <button onclick="switchTab('wizard')" id="btn-wizard" class="px-4 py-2 rounded-lg bg-urgegas-900 font-medium transition hover:bg-urgegas-700">Diagnóstico Guiado</button>
+                <button onclick="switchTab('quiz')" id="btn-quiz" class="px-4 py-2 rounded-lg bg-urgegas-900 font-medium transition hover:bg-urgegas-700">Evaluación y Quiz</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- TAB 1: MANUAL TÉCNICO -->
+        <section id="tab-manual" class="space-y-8">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="border-b pb-4 mb-6">
+                    <span class="bg-urgegas-100 text-urgegas-800 text-xs font-semibold px-2.5 py-0.5 rounded uppercase">Módulo Oficial</span>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-2">📘 Manual de Capacitación y Soporte Técnico Definitivo</h2>
+                    <p class="text-gray-600 mt-1">Guía experta de operación, resolución de problemas y atención al cliente final para dispositivos IoT de gas L.P.</p>
+                </div>
+
+                <!-- Quick Video Cards Grid -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-video text-urgegas-600"></i> Videotutoriales de Soporte Clave
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Video 1 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 shadow-sm flex flex-col">
+                            <div class="relative pb-[56.25%] bg-black">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/xZLXz2A2ps4" title="Instalación y Limpieza" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h4 class="font-bold text-sm text-gray-900 mb-1">1. Instalación y Limpieza</h4>
+                                <p class="text-xs text-gray-600 mb-3">Proceso correcto de montaje y preparación de superficie.</p>
+                                <a href="https://www.youtube.com/shorts/xZLXz2A2ps4" target="_blank" class="text-xs text-urgegas-700 font-semibold hover:underline flex items-center gap-1">Ver en YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 2 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 shadow-sm flex flex-col">
+                            <div class="relative pb-[56.25%] bg-black">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/PAvAL4v5ySA" title="Alineación y Lectura en Cero" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h4 class="font-bold text-sm text-gray-900 mb-1">2. Alineación Magnética</h4>
+                                <p class="text-xs text-gray-600 mb-3">Solución a lecturas en cero y posicionamiento del sensor.</p>
+                                <a href="https://www.youtube.com/shorts/PAvAL4v5ySA" target="_blank" class="text-xs text-urgegas-700 font-semibold hover:underline flex items-center gap-1">Ver en YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 3 -->
+                        <div class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 shadow-sm flex flex-col">
+                            <div class="relative pb-[56.25%] bg-black">
+                                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/TX2NKRUH4_o" title="Sincronización Wi-Fi" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <h4 class="font-bold text-sm text-gray-900 mb-1">3. Sincronización Wi-Fi</h4>
+                                <p class="text-xs text-gray-600 mb-3">Conexión a banda de 2.4 GHz y vinculación con la App Urgegas.</p>
+                                <a href="https://www.youtube.com/shorts/TX2NKRUH4_o" target="_blank" class="text-xs text-urgegas-700 font-semibold hover:underline flex items-center gap-1">Ver en YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Structured Manual Summary -->
+                <div class="space-y-6 text-gray-700">
+                    <h3 class="text-lg font-semibold text-gray-800 border-b pb-2">Puntos Críticos de Operación Técnica</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-urgegas-50 p-4 rounded-xl border border-urgegas-100">
+                            <h4 class="font-bold text-urgegas-900 mb-2"><i class="fa-solid fa-shield-halved mr-1"></i> Resistencia y Clima (IP57)</h4>
+                            <p class="text-sm">Resistente a chorros de agua y lluvia directa. Tapas de baterías deben estar perfectamente atornilladas para mantener garantía. En zonas costeras con salitre, usar grasa dieléctrica Permatex.</p>
+                        </div>
+                        <div class="bg-urgegas-50 p-4 rounded-xl border border-urgegas-100">
+                            <h4 class="font-bold text-urgegas-900 mb-2"><i class="fa-solid fa-battery-full mr-1"></i> Baterías y Consumo</h4>
+                            <p class="text-sm">Duración de 1-2 años (pilas alcalinas) y hasta 5 años (litio). Gasto inicial alto durante búsqueda de señal; posteriormente entra en modo de bajo consumo (*Sleep Mode*).</p>
+                        </div>
+                        <div class="bg-urgegas-50 p-4 rounded-xl border border-urgegas-100">
+                            <h4 class="font-bold text-urgegas-900 mb-2"><i class="fa-solid fa-wifi mr-1"></i> Conectividad y Red</h4>
+                            <p class="text-sm">Sin suscripción estándar para hogares. Requiere estrictamente red Wi-Fi de **2.4 GHz** (no compatible con bandas combinadas de 5 GHz). Compartible hasta con 3 usuarios adicionales y 5 tanques por cuenta.</p>
+                        </div>
+                        <div class="bg-urgegas-50 p-4 rounded-xl border border-urgegas-100">
+                            <h4 class="font-bold text-urgegas-900 mb-2"><i class="fa-solid fa-bullseye mr-1"></i> Precisión Ultrasónica</h4>
+                            <p class="text-sm">Margen de error de $\pm 2\%$. Distinto al medidor de aguja mecánico tradicional ($\pm 5\%$). Requiere superficies limpias de óxido y sin doble pintura; láminas menores a 7 mm.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: FAQ INTERACTIVO -->
+        <section id="tab-faq" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4 border-b pb-4">
+                    <div>
+                        <span class="bg-urgegas-100 text-urgegas-800 text-xs font-semibold px-2.5 py-0.5 rounded uppercase">Base de Conocimiento</span>
+                        <h2 class="text-2xl font-bold text-gray-900 mt-2">❓ Preguntas Frecuentes (FAQ Oficial y Soporte Avanzado)</h2>
+                        <p class="text-gray-600 mt-1">Busca o expande cualquier pregunta para consultar la respuesta oficial de soporte.</p>
+                    </div>
+                    <div class="w-full md:w-72">
+                        <input type="text" id="faqSearch" placeholder="Buscar duda o palabra clave..." onkeyup="filterFAQ()" class="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-urgegas-500">
+                    </div>
+                </div>
+
+                <!-- Accordion Container -->
+                <div id="faqAccordion" class="space-y-4">
+                    <!-- FAQ Items will be dynamically managed or statically listed with interactive scripts -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: DIAGNÓSTICO GUIADO (WIZARD) -->
+        <section id="tab-wizard" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 max-w-3xl mx-auto">
+                <div class="border-b pb-4 mb-6 text-center">
+                    <span class="bg-urgegas-100 text-urgegas-800 text-xs font-semibold px-2.5 py-0.5 rounded uppercase">Herramienta Interactiva</span>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-2">🛠️ Asistente de Diagnóstico de Campo</h2>
+                    <p class="text-gray-600 mt-1">Selecciona el problema principal que experimenta el cliente para obtener la solución inmediata paso a paso.</p>
+                </div>
+
+                <div id="wizard-container" class="space-y-6">
+                    <div id="wizard-step-1">
+                        <h3 class="font-semibold text-gray-800 mb-4">¿Qué tipo de problema presenta el dispositivo?</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <button onclick="setWizardIssue('zero')" class="p-4 border rounded-xl hover:border-urgegas-500 hover:bg-urgegas-50 text-left transition flex items-center gap-3">
+                                <i class="fa-solid fa-triangle-exclamation text-xl text-amber-500"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">Marca Cero (0) o sin lectura</h4>
+                                    <p class="text-xs text-gray-500">El sensor no detecta el gas en absoluto.</p>
+                                </div>
+                            </button>
+                            <button onclick="setWizardIssue('wifi')" class="p-4 border rounded-xl hover:border-urgegas-500 hover:bg-urgegas-50 text-left transition flex items-center gap-3">
+                                <i class="fa-solid fa-wifi text-xl text-blue-500"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">Sin conexión / Error Wi-Fi</h4>
+                                    <p class="text-xs text-gray-500">La App no conecta o pierde señal constante.</p>
+                                </div>
+                            </button>
+                            <button onclick="setWizardIssue('epoxy')" class="p-4 border rounded-xl hover:border-urgegas-500 hover:bg-urgegas-50 text-left transition flex items-center gap-3">
+                                <i class="fa-solid fa-droplet text-xl text-red-500"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">Accidente con pegamento epóxico</h4>
+                                    <p class="text-xs text-gray-500">Se resbaló o manchó la superficie del tanque.</p>
+                                </div>
+                            </button>
+                            <button onclick="setWizardIssue('unstable')" class="p-4 border rounded-xl hover:border-urgegas-500 hover:bg-urgegas-50 text-left transition flex items-center gap-3">
+                                <i class="fa-solid fa-chart-line text-xl text-purple-500"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">Lecturas inestables o caída drástica</h4>
+                                    <p class="text-xs text-gray-500">Variaciones extrañas o alerta de anomalía.</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="wizard-step-2" class="hidden">
+                        <div id="wizard-result-content" class="bg-urgegas-50 border border-urgegas-200 p-6 rounded-xl space-y-4">
+                            <!-- Dynamic Content inserted via JS -->
+                        </div>
+                        <div class="mt-6 flex justify-between">
+                            <button onclick="resetWizard()" class="px-4 py-2 border rounded-lg text-sm text-gray-600 hover:bg-gray-100 transition"><i class="fa-solid fa-arrow-left mr-1"></i> Elegir otro problema</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: MÓDULO DE EVALUACIÓN Y QUIZ INTERACTIVO -->
+        <section id="tab-quiz" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 max-w-3xl mx-auto">
+                <div class="border-b pb-4 mb-6 text-center">
+                    <span class="bg-urgegas-100 text-urgegas-800 text-xs font-semibold px-2.5 py-0.5 rounded uppercase">Capacitación y Autodiagnóstico</span>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-2">🧠 Quiz Interactivo de Soporte Técnico Urgegas</h2>
+                    <p class="text-gray-600 mt-1">Pon a prueba tus conocimientos sobre los dispositivos IoT, evalúa tu nivel de aprendizaje y repasa los temas clave.</p>
+                </div>
+
+                <!-- Quiz Start Screen -->
+                <div id="quiz-start-screen" class="text-center py-8 space-y-4">
+                    <div class="bg-urgegas-50 w-20 h-20 mx-auto rounded-full flex items-center justify-center text-urgegas-600 text-3xl shadow-inner">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">¿Estás listo para certificar tu nivel de soporte?</h3>
+                    <p class="text-sm text-gray-600 max-w-md mx-auto">Esta evaluación consta de 6 preguntas clave sobre instalación, conectividad, resolución de anomalías y especificaciones técnicas de Urgegas IoT.</p>
+                    <button onclick="startQuiz()" class="mt-4 bg-urgegas-600 text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-urgegas-700 transition">Comenzar Evaluación</button>
+                </div>
+
+                <!-- Quiz Question Screen -->
+                <div id="quiz-question-screen" class="hidden space-y-6">
+                    <div class="flex justify-between items-center text-xs font-semibold text-gray-500 uppercase tracking-wider border-b pb-2">
+                        <span id="quiz-progress-text">Pregunta 1 de 6</span>
+                        <span id="quiz-score-badge" class="bg-urgegas-100 text-urgegas-800 px-2 py-0.5 rounded">Puntuación: 0</span>
+                    </div>
+                    <div id="quiz-question-container" class="space-y-4">
+                        <!-- Dynamic Question Header -->
+                        <h3 id="quiz-question-title" class="text-lg font-bold text-gray-900"></h3>
+                        <!-- Options Container -->
+                        <div id="quiz-options-list" class="space-y-3"></div>
+                    </div>
+                    <!-- Feedback box -->
+                    <div id="quiz-feedback-box" class="hidden p-4 rounded-xl border transition-all"></div>
+                    <div class="flex justify-end pt-4 border-t">
+                        <button id="quiz-next-btn" onclick="nextQuestion()" class="hidden bg-urgegas-600 text-white font-semibold px-6 py-2.5 rounded-xl shadow hover:bg-urgegas-700 transition">Siguiente Pregunta <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results Screen -->
+                <div id="quiz-results-screen" class="hidden text-center py-8 space-y-6">
+                    <div id="quiz-result-icon" class="w-20 h-20 mx-auto rounded-full flex items-center justify-center text-3xl shadow"></div>
+                    <div>
+                        <h3 id="quiz-result-title" class="text-2xl font-bold text-gray-900"></h3>
+                        <p id="quiz-result-subtitle" class="text-sm text-gray-600 mt-1"></p>
+                    </div>
+                    <div id="quiz-recommendations" class="bg-gray-50 border p-6 rounded-xl text-left space-y-3 max-w-lg mx-auto">
+                        <h4 class="font-bold text-gray-800 text-sm flex items-center gap-2"><i class="fa-solid fa-book-open text-urgegas-600"></i> Recomendaciones de Repaso:</h4>
+                        <ul id="quiz-rec-list" class="space-y-2 text-xs text-gray-700"></ul>
+                    </div>
+                    <button onclick="resetQuiz()" class="bg-urgegas-600 text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-urgegas-700 transition">Reiniciar Evaluación</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12 py-6 text-center text-xs text-gray-500">
+        Urgegas IoT Support & Training System &copy; 2026. Todos los derechos reservados.
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Data for FAQs
+        const faqData = [
+            {
+                q: "1. El dispositivo, ¿resiste el agua y la lluvia?",
+                a: "Sí, cuenta con certificación IP57 (resistente a chorros de agua y lluvia directa). No está diseñado para ser sumergido. Es indispensable verificar que las tapas de las baterías estén perfectamente atornilladas para validar la garantía."
+            },
+            {
+                q: "2. ¿Qué pasa si le entra agua y deja de funcionar?",
+                a: "Si la filtración ocurre a pesar de haber cerrado correctamente las tapas, aplica la garantía y se realiza el cambio del dispositivo. Todos los medidores defectuosos son devueltos al fabricante para auditoría."
+            },
+            {
+                q: "3. ¿Cuánto duran las baterías?",
+                a: "Entre 1 y 2 años en condiciones normales con pilas alcalinas. Con pilas de litio, se extiende hasta 5 años (altamente recomendable para comercios). Al inicio consume batería buscando señal; luego entra en modo de bajo consumo (Sleep Mode)."
+            },
+            {
+                q: "4. ¿Se tiene que pagar por datos celulares o suscripción?",
+                a: "No para hogares estándar. El monitoreo estándar no requiere pago de planes de datos ni suscripciones mensuales. Solo aplica suscripción para administradores de flotas masivas (edificios, hoteles, fraccionamientos)."
+            },
+            {
+                q: "5. ¿Puedo compartir la lectura de mi tanque con otras personas?",
+                a: "Sí, se puede compartir el acceso hasta con 3 personas más desde el menú de configuraciones de la app. Cada cuenta puede registrar hasta 5 tanques de forma gratuita."
+            },
+            {
+                q: "6. ¿Qué tan exactas son las lecturas del dispositivo?",
+                a: "Tienen un margen de error de $\\pm 2\\%$ si el tanque está perfectamente nivelado y se seleccionó correctamente la marca/modelo en la app."
+            },
+            {
+                q: "7. El medidor de aguja marca 65% y Urgegas 71%, ¿por qué hay diferencia?",
+                a: "El medidor mecánico de aguja usa un flotador con un margen de error del $5\\%$ o más debido al desgaste mecánico. El sistema ultrasónico ofrece mayor precisión digital."
+            },
+            {
+                q: "8. ¿Para qué sirve el botón 'Compensación de Temperatura'?",
+                a: "El gas L.P. se expande con el calor y se contrae con el frío. Este parámetro en la app compensa dichas variaciones térmicas para evitar alteraciones en el cálculo ultrasónico."
+            },
+            {
+                q: "9. Mi medidor no detecta el gas o marca siempre cero (0), ¿a qué se debe?",
+                a: "Causas comunes: Lámina mayor a 7 mm, retiro de la cubierta de silicón roja (NUNCA retirarla), óxido profundo, doble capa de pintura gruesa o superficies ásperas. Se debe buscar siempre la 'zona verde'."
+            },
+            {
+                q: "10. ¿Qué hago si mi tanque está muy dañado, poroso o con exceso de pintura?",
+                a: "Sugiere al cliente que un profesional revise el tanque. Algunos técnicos pulen la base; advertir estrictamente al cliente que NUNCA lije el tanque por su cuenta para evitar chispas, fugas o explosiones."
+            },
+            {
+                q: "11. Mis lecturas iban bien, pero de repente marcan cero o se cayeron de golpe",
+                a: "Indica que el dispositivo se movió de su posición original (golpe por mascota o curiosidad). Ejecuta la prueba de instalación desde la App y recolócalo firmemente usando cinta industrial."
+            },
+            {
+                q: "12. ¿Qué pasa si roban el dispositivo?",
+                a: "El hardware está vinculado por seguridad alfanumérica en la nube. Solo el primer usuario registrado puede utilizarlo. Puede reportarse a Urgegas para bloquear el identificador."
+            },
+            {
+                q: "13. ¿El imán es lo suficientemente fuerte para sostenerse?",
+                a: "Sí, el campo magnético es de alta retención. Camiones y pipas operan con dispositivos sujetos únicamente por imán en movimiento constante sin desprenderse."
+            },
+            {
+                q: "14. ¿Qué hago si la marca de mi tanque no aparece en la app?",
+                a: "Puedes seleccionar temporalmente otra marca con dimensiones similares o comunicarte con soporte de Urgegas para registrarla e integrarla tras validación."
+            },
+            {
+                q: "P15: ¡Pegué el dispositivo con epóxico y se resbaló en zona equivocada!",
+                a: "¡Actúa rápido! El epóxico fragua en 1-2 minutos. Desprende el sensor, limpia residuos con alcohol etílico o isopropílico antes de que fragüe por completo, seca, mezcla una nueva porción y recoloca."
+            },
+            {
+                q: "P16: ¿Por qué debo esperar 5 minutos tras pegar el sensor?",
+                a: "El adhesivo epóxico necesita un tiempo de curado inicial (fraguado de soporte) para soportar el peso y presión magnética sin deslizarse. Montarlo de inmediato arruinará la lectura."
+            },
+            {
+                q: "P17: Vivo en zona costera con salitre, ¿se va a oxidar el sensor?",
+                a: "El cuerpo cuenta con protección IP57. En alta salinidad, recomendamos limpieza exhaustiva previa y aplicar grasa dieléctrica Permatex para proteger contra corrosión galvánica."
+            },
+            {
+                q: "P18: La app dice 'Sin conexión' a cada rato, ¿es culpa de mi teléfono?",
+                a: "No necesariamente. El tanque puede estar en una zona con señal Wi-Fi débil o cobertura celular deficiente (detrás de muros de concreto). Evalúa instalar un repetidor Wi-Fi económico."
+            },
+            {
+                q: "P19: Intenté conectar el dispositivo al módem y la app no lo encuentra",
+                a: "Verifica que la red inalámbrica sea estrictamente de 2.4 GHz (los módems con 5 GHz combinados fallan) y que la contraseña no tenga espacios. Reinicia el dispositivo retirando una pila por 5 segundos."
+            },
+            {
+                q: "P20: Noté que mi consumo bajó drásticamente y la app mandó alerta de anomalía",
+                a: "Es una alerta de seguridad. Ocurre por desalineación física o variación atípica de volumen asociada a posible fuga en mangueras. Revisa la posición del medidor y realiza prueba de hermeticidad."
+            }
+        ];
+
+        // Render FAQ Accordion
+        function renderFAQ(items = faqData) {
+            const container = document.getElementById('faqAccordion');
+            container.innerHTML = '';
+            items.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'border rounded-xl overflow-hidden bg-gray-50 transition hover:border-urgegas-500';
+                div.innerHTML = `
+                    <button onclick="toggleFAQ(${index})" class="w-full px-6 py-4 text-left font-semibold text-gray-800 flex justify-between items-center gap-4 focus:outline-none">
+                        <span>${item.q}</span>
+                        <i id="faq-icon-${index}" class="fa-solid fa-chevron-down text-urgegas-600 transition-transform"></i>
+                    </button>
+                    <div id="faq-content-${index}" class="hidden px-6 pb-4 text-sm text-gray-600 border-t bg-white pt-3">
+                        <p>${item.a}</p>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function toggleFAQ(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        function filterFAQ() {
+            const query = document.getElementById('faqSearch').value.toLowerCase();
+            const filtered = faqData.filter(item => item.q.toLowerCase().includes(query) || item.a.toLowerCase().includes(query));
+            renderFAQ(filtered);
+        }
+
+        // Tab Switching Logic
+        function switchTab(tab) {
+            document.getElementById('tab-manual').classList.add('hidden');
+            document.getElementById('tab-faq').classList.add('hidden');
+            document.getElementById('tab-wizard').classList.add('hidden');
+            document.getElementById('tab-quiz').classList.add('hidden');
+
+            document.getElementById('btn-manual').className = 'px-4 py-2 rounded-lg bg-urgegas-900 font-medium transition hover:bg-urgegas-700';
+            document.getElementById('btn-faq').className = 'px-4 py-2 rounded-lg bg-urgegas-900 font-medium transition hover:bg-urgegas-700';
+            document.getElementById('btn-wizard').className = 'px-4 py-2 rounded-lg bg-urgegas-900 font-medium transition hover:bg-urgegas-700';
+            document.getElementById('btn-quiz').className = 'px-4 py-2 rounded-lg bg-urgegas-900 font-medium transition hover:bg-urgegas-700';
+
+            document.getElementById(`tab-${tab}`).classList.remove('hidden');
+            document.getElementById(`btn-${tab}`).className = 'px-4 py-2 rounded-lg bg-urgegas-700 font-medium transition hover:bg-urgegas-600';
+        }
+
+        // Quiz Data and State
+        const quizQuestions = [
+            {
+                question: "1. ¿Qué certificación de resistencia al agua posee el dispositivo Urgegas y qué precaución debemos verificar?",
+                options: [
+                    "A) Certificación IP68 sumergible; se puede dejar bajo el agua sin problema.",
+                    "B) Certificación IP57 (resistente a lluvia y chorros); debemos verificar que las tapas de baterías estén bien atornilladas.",
+                    "C) No cuenta con certificación contra agua, requiere funda impermeable externa.",
+                    "D) Certificación IP20 únicamente para interiores protegidos de la humedad."
+                ],
+                correct: 1,
+                explanation: "El dispositivo cuenta con certificación IP57 para chorros de agua y lluvia directa, pero no es sumergible. Las tapas deben atornillarse perfectamente para validar la garantía.",
+                section: "Módulo 1 - Sección 1: Resistencia al agua y la intemperie"
+            },
+            {
+                question: "2. Un cliente pegó el sensor con epóxico y se resbaló en una zona equivocada. ¿Cuál es la instrucción técnica correcta?",
+                options: [
+                    "A) Dejar que seque por completo durante 24 horas y luego arrancarlo con pinzas.",
+                    "B) Actuar rápido antes de que fragüe (1-2 min), desprender, limpiar con alcohol etílico o isopropílico, secar y recolocar.",
+                    "C) Echar agua caliente para disolver el adhesivo epóxico de dos componentes.",
+                    "D) Descartar el sensor y comprar uno nuevo de inmediato."
+                ],
+                correct: 1,
+                explanation: "El epóxico fragua rápidamente. Si hay error, se debe desprender de inmediato y limpiar con alcohol etílico o isopropílico antes de que endurezca por completo.",
+                section: "Módulo 2 - P15: Soporte Avanzado (Adhesivo Epóxico)"
+            },
+            {
+                question: "3. ¿Por qué motivo principal una red Wi-Fi de 5 GHz moderna puede generar problemas al conectar el dispositivo?",
+                options: [
+                    "A) Porque el chip del dispositivo está diseñado exclusivamente para redes de 2.4 GHz.",
+                    "B) Porque las redes de 5 GHz consumen demasiada energía y descargan las pilas en una semana.",
+                    "C) Porque la señal de 5 GHz destruye las ondas ultrasónicas del medidor.",
+                    "D) No hay ningún problema, el dispositivo es compatible automáticamente con ambas bandas."
+                ],
+                correct: 0,
+                explanation: "Los módems modernos con bandas combinadas o redes puras de 5 GHz no son reconocidos por el chip del dispositivo; se requiere estrictamente red inalámbrica de 2.4 GHz.",
+                section: "Módulo 2 - P19: Conectividad y Redes Wi-Fi"
+            },
+            {
+                question: "4. ¿Por qué existe diferencia entre la lectura del medidor de aguja físico (ej. 65%) y el medidor Urgegas (ej. 71%)?",
+                options: [
+                    "A) Porque el sensor Urgegas está mal calibrado de fábrica.",
+                    "B) Porque el medidor de aguja mecánico usa un flotador con margen de error del 5% o más por desgaste, frente a la precisión ultrasónica.",
+                    "C) Porque el gas L.P. se evapora durante la transmisión digital.",
+                    "D) Es un error de la aplicación al no actualizar la zona horaria."
+                ],
+                correct: 1,
+                explanation: "El medidor de aguja utiliza un flotador mecánico propenso al desgaste y error (>5%), mientras que el sistema ultrasónico ofrece alta precisión digital con compensación.",
+                section: "Módulo 1 - Sección 5: Calibración y Precisión"
+            },
+            {
+                question: "5. ¿Qué se debe hacer si un tanque está muy oxidado, poroso o con exceso de pintura y el sensor marca cero (0)?",
+                options: [
+                    "A) Sugerir al cliente que lije enérgicamente el tanque por su cuenta con una lija de metal.",
+                    "B) Retirar permanentemente la cubierta de silicón roja para mejorar el contacto.",
+                    "C) Recomendar revisión profesional o pulido seguro por un experto, advirtiendo estrictamente NUNCA lijar el tanque por cuenta propia (riesgo de chispa/explosión).",
+                    "D) Golpear el tanque con un martillo para remover el óxido."
+                ],
+                correct: 2,
+                explanation: "Nunca se debe permitir que el usuario lije el tanque por cuenta propia debido al peligro mortal de chispa y fuga de gas. Se requiere un profesional o buscar una 'zona verde'.",
+                section: "Módulo 1 - Sección 6: Diagnóstico de Errores (Lector en Cero)"
+            },
+            {
+                question: "6. ¿Qué indica una alerta repentina de caída drástica en el consumo o anomalía en la gráfica de la App?",
+                options: [
+                    "A) Que las baterías se agotaron por completo de forma instantánea.",
+                    "B) Que el dispositivo se desalineó físicamente (golpe) o existe una variación atípica de volumen asociada a posible fuga.",
+                    "C) Que la suscripción mensual ha expirado.",
+                    "D) Que es hora de cambiar el tanque de gas obligatoriamente."
+                ],
+                correct: 1,
+                explanation: "Es una alerta de seguridad que indica desalineación física del sensor o una posible fuga en mangueras que requiere verificación inmediata.",
+                section: "Módulo 2 - P20: Alertas de Anomalías y Seguridad"
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let userAnswersHistory = [];
+
+        function startQuiz() {
+            currentQuizIndex = 0;
+            quizScore = 0;
+            userAnswersHistory = [];
+            document.getElementById('quiz-start-screen').classList.add('hidden');
+            document.getElementById('quiz-results-screen').classList.add('hidden');
+            document.getElementById('quiz-question-screen').classList.remove('hidden');
+            loadQuizQuestion();
+        }
+
+        function loadQuizQuestion() {
+            const q = quizQuestions[currentQuizIndex];
+            document.getElementById('quiz-progress-text').innerText = `Pregunta ${currentQuizIndex + 1} de ${quizQuestions.length}`;
+            document.getElementById('quiz-score-badge').innerText = `Puntuación: ${quizScore}`;
+            document.getElementById('quiz-question-title').innerText = q.question;
+
+            const optionsList = document.getElementById('quiz-options-list');
+            optionsList.innerHTML = '';
+            
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left p-4 rounded-xl border border-gray-200 hover:border-urgegas-500 hover:bg-urgegas-50 transition text-sm font-medium text-gray-700 flex items-center justify-between';
+                btn.innerHTML = `<span>${opt}</span> <i class="fa-regular fa-circle text-gray-400"></i>`;
+                btn.onclick = () => selectQuizOption(idx);
+                btn.id = `quiz-opt-${idx}`;
+                optionsList.appendChild(btn);
+            });
+
+            document.getElementById('quiz-feedback-box').classList.add('hidden');
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+        }
+
+        function selectQuizOption(selectedIdx) {
+            const q = quizQuestions[currentQuizIndex];
+            const options = document.querySelectorAll('#quiz-options-list button');
+            
+            // Disable all options after selection
+            options.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correct) {
+                    btn.className = 'w-full text-left p-4 rounded-xl border border-green-500 bg-green-50 text-sm font-semibold text-green-900 flex items-center justify-between';
+                    btn.querySelector('i').className = 'fa-solid fa-circle-check text-green-600';
+                } else if (idx === selectedIdx) {
+                    btn.className = 'w-full text-left p-4 rounded-xl border border-red-500 bg-red-50 text-sm font-semibold text-red-900 flex items-center justify-between';
+                    btn.querySelector('i').className = 'fa-solid fa-circle-xmark text-red-600';
+                } else {
+                    btn.className = 'w-full text-left p-4 rounded-xl border border-gray-200 opacity-50 text-sm text-gray-500 flex items-center justify-between';
+                }
+            });
+
+            const isCorrect = selectedIdx === q.correct;
+            if (isCorrect) {
+                quizScore += 10;
+            }
+
+            userAnswersHistory.push({
+                question: q.question,
+                isCorrect: isCorrect,
+                correctText: q.options[q.correct],
+                explanation: q.explanation,
+                section: q.section
+            });
+
+            const feedbackBox = document.getElementById('quiz-feedback-box');
+            feedbackBox.classList.remove('hidden');
+            if (isCorrect) {
+                feedbackBox.className = 'p-4 rounded-xl border border-green-200 bg-green-50 space-y-2';
+                feedbackBox.innerHTML = `
+                    <h4 class="font-bold text-green-900 flex items-center gap-2"><i class="fa-solid fa-check-circle text-green-600"></i> ¡Respuesta Correcta!</h4>
+                    <p class="text-xs text-green-800">${q.explanation}</p>
+                `;
+            } else {
+                feedbackBox.className = 'p-4 rounded-xl border border-red-200 bg-red-50 space-y-2';
+                feedbackBox.innerHTML = `
+                    <h4 class="font-bold text-red-900 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation text-red-600"></i> Respuesta Incorrecta</h4>
+                    <p class="text-xs text-red-800"><strong>Respuesta correcta:</strong> ${q.options[q.correct]}</p>
+                    <p class="text-xs text-red-800 mt-1"><strong>Explicación:</strong> ${q.explanation}</p>
+                    <div class="mt-2 pt-2 border-t border-red-200 text-xs font-semibold text-red-900">
+                        <i class="fa-solid fa-book-bookmark mr-1"></i> Tema a repasar: ${q.section}
+                    </div>
+                `;
+            }
+
+            document.getElementById('quiz-score-badge').innerText = `Puntuación: ${quizScore}`;
+            document.getElementById('quiz-next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuizIndex++;
+            if (currentQuizIndex < quizQuestions.length) {
+                loadQuizQuestion();
+            } else {
+                showQuizResults();
+            }
+        }
+
+        function showQuizResults() {
+            document.getElementById('quiz-question-screen').classList.add('hidden');
+            document.getElementById('quiz-results-screen').classList.remove('hidden');
+
+            const totalScore = quizScore;
+            const maxScore = quizQuestions.length * 10;
+            const percentage = (totalScore / maxScore) * 100;
+
+            const iconEl = document.getElementById('quiz-result-icon');
+            const titleEl = document.getElementById('quiz-result-title');
+            const subtitleEl = document.getElementById('quiz-result-subtitle');
+            const recList = document.getElementById('quiz-rec-list');
+            recList.innerHTML = '';
+
+            if (percentage >= 80) {
+                iconEl.className = 'w-20 h-20 mx-auto rounded-full flex items-center justify-center text-3xl shadow bg-green-100 text-green-600';
+                iconEl.innerHTML = '<i class="fa-solid fa-award"></i>';
+                titleEl.innerText = '¡Excelente Desempeño!';
+                subtitleEl.innerText = `Has obtenido ${totalScore} de ${maxScore} puntos (${percentage}%). ¡Estás completamente capacitado para brindar soporte técnico experto en Urgegas IoT!`;
+                recList.innerHTML = '<li class="text-green-800 font-semibold"><i class="fa-solid fa-check mr-1"></i> Ninguna lección pendiente. Dominas todos los estándares técnicos y de resolución de problemas.</li>';
+            } else {
+                iconEl.className = 'w-20 h-20 mx-auto rounded-full flex items-center justify-center text-3xl shadow bg-amber-100 text-amber-600';
+                iconEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+                titleEl.innerText = 'Evaluación Concluida con Áreas de Oportunidad';
+                subtitleEl.innerText = `Has obtenido ${totalScore} de ${maxScore} puntos (${percentage}%). Te sugerimos repasar los siguientes temas para fortalecer tus conocimientos:`;
+
+                const incorrectItems = userAnswersHistory.filter(item => !item.isCorrect);
+                if (incorrectItems.length === 0) {
+                    recList.innerHTML = '<li>¡Buen trabajo! Repasa los detalles generales del manual para alcanzar la perfección.</li>';
+                } else {
+                    incorrectItems.forEach(item => {
+                        const li = document.createElement('li');
+                        li.className = 'flex items-start gap-2 text-red-800 bg-red-50 p-2 rounded-lg';
+                        li.innerHTML = `<i class="fa-solid fa-circle-xmark mt-0.5 shrink-0"></i> <span><strong>Reforzar:</strong> ${item.section}</span>`;
+                        recList.appendChild(li);
+                    });
+                }
+            }
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-results-screen').classList.add('hidden');
+            document.getElementById('quiz-start-screen').classList.remove('hidden');
+        }
+
+        // Wizard Logic
+        const wizardSolutions = {
+            zero: {
+                title: "Diagnóstico: Medidor marca Cero (0) o sin lectura",
+                steps: [
+                    "Verifica que **nunca se haya retirado la cubierta de silicón roja** del sensor.",
+                    "Comprueba que el grosor de la lámina del tanque no supere los **7 mm**.",
+                    "Inspecciona la superficie en busca de óxido profundo o doble capa de pintura gruesa que bloquee la señal ultrasónica. Busca siempre la 'zona verde'.",
+                    "Consulta el video de alineación magnética para asegurar el contacto correcto."
+                ],
+                video: "https://www.youtube.com/shorts/PAvAL4v5ySA"
+            },
+            wifi: {
+                title: "Diagnóstico: Error de conexión o App 'Sin conexión'",
+                steps: [
+                    "Asegúrate de que la red Wi-Fi sea exclusivamente de **2.4 GHz** (los módems modernos de 5 GHz combinados no son reconocidos).",
+                    "Verifica la intensidad de la señal con tu celular junto al tanque (muros de concreto o patios cerrados debilitan la señal).",
+                    "Reinicia el dispositivo apagándolo (retira una pila por 5 segundos) y repite la vinculación.",
+                    "Consulta el videotutorial de sincronización de red."
+                ],
+                video: "https://www.youtube.com/shorts/TX2NKRUH4_o"
+            },
+            epoxy: {
+                title: "Diagnóstico: Accidente con pegamento epóxico",
+                steps: [
+                    "¡Actúa inmediato! El adhesivo endurece en 1 o 2 minutos.",
+                    "Desprende el sensor de inmediato antes de que fragüe por completo.",
+                    "Limpia los residuos del tanque y del aparato usando **alcohol etílico o isopropílico** con un trapo.",
+                    "Seca perfectamente, prepara una nueva mezcla de partes iguales en ambos tubos y recoloca con mayor precaución, esperando 5 minutos de curado inicial."
+                ],
+                video: "https://www.youtube.com/shorts/xZLXz2A2ps4"
+            },
+            unstable: {
+                title: "Diagnóstico: Lecturas inestables o caída drástica",
+                steps: [
+                    "Verifica si el dispositivo se desalineó físicamente (pudo ser golpeado por una mascota o movimiento).",
+                    "Ejecuta nuevamente la **prueba de instalación desde la App**.",
+                    "Recoloca el sensor firmemente y asegura el contorno con cinta industrial para exteriores.",
+                    "Si hay condensación constante (tanques estacionarios >1,000L), aplica grasa dieléctrica Permatex."
+                ],
+                video: "https://www.youtube.com/shorts/PAvAL4v5ySA"
+            }
+        };
+
+        function setWizardIssue(issueKey) {
+            const sol = wizardSolutions[issueKey];
+            const contentDiv = document.getElementById('wizard-result-content');
+            
+            let stepsHTML = sol.steps.map((s, i) => `<li class="flex items-start gap-2 text-sm text-gray-700"><span class="bg-urgegas-500 text-white font-bold rounded-full w-5 h-5 flex items-center justify-center text-xs shrink-0 mt-0.5">${i+1}</span> <span>${s}</span></li>`).join('');
+
+            contentDiv.innerHTML = `
+                <h3 class="font-bold text-lg text-urgegas-900">${sol.title}</h3>
+                <ul class="space-y-2 mt-2">${stepsHTML}</ul>
+                <div class="pt-4 border-t mt-4 flex items-center justify-between">
+                    <span class="text-xs font-semibold text-gray-600">Recurso de video recomendado:</span>
+                    <a href="${sol.video}" target="_blank" class="text-xs bg-urgegas-700 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-urgegas-600 transition flex items-center gap-1">Ver Tutorial <i class="fa-solid fa-play text-[10px]"></i></a>
+                </div>
+            `;
+
+            document.getElementById('wizard-step-1').classList.add('hidden');
+            document.getElementById('wizard-step-2').classList.remove('hidden');
+        }
+
+        function resetWizard() {
+            document.getElementById('wizard-step-2').classList.add('hidden');
+            document.getElementById('wizard-step-1').classList.remove('hidden');
+        }
+
+        // Initial load
+        window.onload = function() {
+            renderFAQ();
+        };
+    </script>
+</body>
+</html>
